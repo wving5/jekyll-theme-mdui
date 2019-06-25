@@ -1,5 +1,5 @@
-# source "https://rubygems.org"
-source 'https://gems.ruby-china.com'
+source "https://rubygems.org"
+# source 'https://gems.ruby-china.com'
 
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'

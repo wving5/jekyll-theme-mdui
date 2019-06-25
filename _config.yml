@@ -1,8 +1,8 @@
-title: "Jekyll-Theme-MDUI"
-description: "A Jekyll theme based on MDUI"
+title: "To The Gate"
+description: ""
 url: 
 baseurl: ""
-author: "KeJun"
+author: "wving5"
 paginate: 5
 paginate_path: "/blog/page:num/"
 
