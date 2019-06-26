@@ -4,6 +4,6 @@
   describe: 二次元智障
 
 - name: MDUI
-  image: 
+  image: https://dummyimage.com/40x40/ffffff/000000&text=MDUI
   url: https://www.mdui.org/
   describe: 一套用于开发 Material Design 网页的前端框架

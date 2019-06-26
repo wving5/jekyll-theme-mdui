@@ -1,25 +1,18 @@
-<link rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css">
-<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-<script>
-$(document).ready(function () {
-    NProgress.configure({
-    showSpinner: true
-});
-NProgress.start();
-$('#nprogress .bar').css({
-    'background': '{{site.data.site.uiux.nprogress_color}}'
-});
-$('#nprogress .peg').css({
-    'box-shadow': '0 0 10px {{site.data.site.uiux.nprogress_color}}, 0 0 15px {{site.data.site.uiux.nprogress_color}}'
-});
-$('#nprogress .spinner-icon').css({
-    'border-top-color': '{{site.data.site.uiux.nprogress_color}}',
-    'border-left-color': '{{site.data.site.uiux.nprogress_color}}'
-});
-setTimeout(function() {
-    NProgress.done();
-},{{site.data.site.uiux.nprogress_buffer}});
-    
-});
+<link href="https://cdn.bootcss.com/pace/1.0.2/themes/green/pace-theme-flash.min.css" rel="stylesheet">
+<style>
+.pace .pace-progress{
+    background: {{site.data.site.uiux.nprogress_color}} !important;
+    height: 3px !important;
+}
+.pace .pace-progress-inner {
+	box-shadow: 0 0 10px {{site.data.site.uiux.nprogress_color}}, 0 0 15px {{site.data.site.uiux.nprogress_color}} !important;
+}
+.pace .pace-activity {
+	top : 19px;
+	top : 120px;
+    border-top-color: {{site.data.site.uiux.nprogress_color}} !important;
+    border-left-color': '{{site.data.site.uiux.nprogress_color}} !important;
+}
 
-</script>
+</style>
+<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>

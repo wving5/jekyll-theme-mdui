@@ -9,8 +9,6 @@ author: wving5
 describe: 
 ---
 
-# Hello world
-
 ````bash
 一个放飞自我的地方（误）
 ````

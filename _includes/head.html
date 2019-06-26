@@ -52,7 +52,6 @@ jQuery(document).ready(function($) {
         }
 		e.preventDefault();
 		History.pushState({}, "", this.pathname);
-        NProgress.start();
 	});
 	History.Adapter.bind(window, 'statechange', function(){
 		var State = History.getState();
@@ -62,7 +61,6 @@ jQuery(document).ready(function($) {
             $('.container').html($(data).find('.content')); 
             document.title = data.match(/<title>(.*?)<\/title>/)[1];
             defaultTitle = document.title;
-            NProgress.done();
             $('#k-menus').html($(data).find('#k-menus').children()); 
             $('#k-mobile-menus').html($(data).find('#k-mobile-menus').children()); 
             $(".content").css('top','50px');
