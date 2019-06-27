@@ -54,6 +54,10 @@ h1.mdui-card-primary-title{
     border-top: 1px solid rgba(0,0,0,.12);
 }
 
+.mdui-appbar, .mdui-toolbar {
+    background-color: #fff !important;
+}
+
 body,header{
     background-color:{{site.data.site.background.purecolor}};
 }
