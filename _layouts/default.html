@@ -15,10 +15,6 @@ layout: compress
         {% if site.data.site.google_analytics != "" %}
         {% include analytics/google.html %}
         {% endif %}
-        {% if site.data.site.baidu_auto_push == true %}
-        {% include submission/baidu.html %}
-        {% endif %}
-        {% include component/sw.html %}
         {% include component/customCssJS.html %}
         {% include footer/footer.html %}
         {% if site.data.site.uiux.meng == true%}
@@ -28,22 +24,11 @@ layout: compress
             {% if site.data.meng.title.switch == true %}
                 {% include meng/title.html %}
             {% endif %}
-            {% if site.data.meng.cursor.switch == true %}
-                {% include meng/cursor.html %}
-            {% endif %}
-            {% if site.data.meng.console.switch == true %}
-                {% include meng/console.html %}
-            {% endif %}
             {% if site.data.meng.background.switch == true %}
                 {% include meng/background.html %}
             {% endif %}
             {% if site.data.meng.card.switch == true %}
                 {% include meng/card.html %}
-            {% endif %}
-            {% if site.data.meng.music_player.player == "cplayer" %}
-                {% include meng/cplayer.html %}
-            {% elsif  site.data.meng.music_player.player == "aplayer"%}
-                {% include meng/aplayer.html %}
             {% endif %}
         {% endif %}
     </body>

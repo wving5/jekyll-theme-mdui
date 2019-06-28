@@ -6,11 +6,11 @@ head:
 
 uiux:
    android_chrome_color: "#eeeeee" #  the color of the Chrome address bar
-   nprogress_color: "#000" #  the color of the top loading progress bar
+   nprogress_color: "#fff" #  the color of the top loading progress bar
    meng: true # meng
 
 background: 
-   purecolor: "#eeeeee" # the background color
+   purecolor: "#2b7cd5" # the background color
 
 img: 
    avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # your avatar
@@ -63,10 +63,7 @@ mathjax: true
 
 google_analytics: ""  # google analytics code
 
-baidu_site_verification: ""  # baidu site verification code
 google_site_verification: ""  # google search console verification code
-
-baidu_auto_push: false  # if you used baidu auto push to commit links
 
 lang: "zh-CN"  # lang
 

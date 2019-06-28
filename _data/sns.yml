@@ -1,32 +1,8 @@
-- name: bilibili
-  url: 
-
-- name: facebook
-  url: 
-
 - name: github
   url: https://github.com/wving5
-
-- name: gplus
-  url: 
-
-- name: instagram
-  url: 
-
-- name: linkedin
-  url: 
 
 - name: telegram
   url: 
 
-- name: tumblr
-  url: 
-
 - name: twitter
-  url: 
-
-- name: weibo
-  url: 
-
-- name: zhihu
   url: 

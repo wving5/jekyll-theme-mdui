@@ -68,24 +68,8 @@
       {% endif %}
       <div class="mdui-divider"></div>
       <div class="mdui-card-header">
-        <div class="mdui-card-menu mdui-typo">
-          {% for category in post.categories %}
-            <a class="k-post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{category}}.html">{{category}}</a>
-          {% endfor %}
-        </div>
-        {% if site.data.site.many_authors == true %}
-        {% if post.author != null %}
-        {% assign author = site.data.authors[post.author] %}
-        <img class="mdui-card-header-avatar" src="{{author.avatar}}" />
-        <div class="mdui-card-header-title">{{author.name}}</div>
-        {% else %}
         <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
         <div class="mdui-card-header-title">{{site.author}}</div>
-        {% endif %}
-        {% else %}
-        <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
-        <div class="mdui-card-header-title">{{site.author}}</div>
-        {% endif %}
         <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>
       </div>
     </div>

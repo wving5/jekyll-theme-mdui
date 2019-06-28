@@ -4,24 +4,24 @@
 {% assign lang = site.data.lang[site.data.site.lang] %}
 {% endif %}
 <style>
-.k-readtime{
-    color: #000000;
-    background: #c0ffee;
-    border-left: 5px solid #00ffd8;
+.k-readtime, .k-readtime:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom, #4490e2 0%, #0c58ab 100%);
+    border-left: 5px solid #ff387c;
     cursor: default;
     text-transform: none;
     text-overflow: ellipsis;
 }
-.k-readtime:hover{
+/*.k-readtime:hover{
     background: #c0ffee;
-}
-.k-readtime:active{
+}*/
+/*.k-readtime:active{
     background: #c0ffee !important;
-}
+}*/
 </style>
 {% assign words = content | strip_html | strip_newlines | size %}
 {% if words < 360 %}
-<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">{{lang.readtime.one}} 1 {{lang.readtime.two}}</a>
+<a class="mdui-btn mdui-btn-block k-readtime">{{lang.readtime.one}} 1 {{lang.readtime.two}}</a>
 {% else %}
-<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">{{lang.readtime.one}} {{ content | strip_html | strip_newlines | size | divided_by:360 | round}} {{lang.readtime.two}}</a>
+<a class="mdui-btn mdui-btn-block k-readtime">{{lang.readtime.one}} {{ content | strip_html | strip_newlines | size | divided_by:360 | round}} {{lang.readtime.two}}</a>
 {% endif %}

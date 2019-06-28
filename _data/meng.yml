@@ -10,13 +10,13 @@ header: # Meng header color + theme-color
 
 background: # Meng background
   switch: true
-  background_img: "https://ooo.0o0.ooo/2017/06/14/5940a9b8e4c21.jpg"
+  # background_img: "https://ooo.0o0.ooo/2017/06/14/5940a9b8e4c21.jpg"
   transparent_header: false
   transparent_footer: false
-  text_color: '#000'
+  text_color: '#fff'
 
 live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
-  switch: true
+  switch: false
   model: "/assets/live2d/miku/tororo.model.json" # model.json path
   drag: true # is drag ?
   in_mobile: false
@@ -28,7 +28,4 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
 
 head_card:
   switch: true
-  left_img: "https://ooo.0o0.ooo/2017/06/19/5947b272d418b.jpg"
-  left_text: "『 · 如果真爱有颜色 』"
-  right_img: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png"
   offset_level: 1
