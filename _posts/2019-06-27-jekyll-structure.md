@@ -2,7 +2,6 @@
 layout: post
 title:  "Jekyll 目录结构"
 date:   2019-06-27 00:21:03 +0800
-categories: tech
 tags: trivial
 img: https://i.loli.net/2019/06/27/5d13b0cac119227606.png
 author: wving5
@@ -52,7 +51,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
       <td>
         <p>
 
-          保存<a href="../configuration/">配置</a>数据。很多配置选项都可以直接在命令行中进行设置，但是如果你把那些配置写在这儿，你就不用非要去记住那些命令了。
+          保存<a href="https://jekyllrb.com/docs/structure/../configuration/">配置</a>数据。很多配置选项都可以直接在命令行中进行设置，但是如果你把那些配置写在这儿，你就不用非要去记住那些命令了。
 
         </p>
       </td>
@@ -64,7 +63,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
       <td>
         <p>
 
-          drafts（草稿）是未发布的文章。这些文件的格式中都没有 <code>title.MARKUP</code> 数据。学习如何 <a href="../drafts/">使用草稿</a>.
+          drafts（草稿）是未发布的文章。这些文件的格式中都没有 <code>title.MARKUP</code> 数据。学习如何 <a href="https://jekyllrb.com/docs/structure/../drafts/">使用草稿</a>.
 
         </p>
       </td>
@@ -90,7 +89,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
       <td>
         <p>
 
-          layouts（布局）是包裹在文章外部的模板。布局可以在 <a href="../frontmatter/">YAML 头信息</a>中根据不同文章进行选择。
+          layouts（布局）是包裹在文章外部的模板。布局可以在 <a href="https://jekyllrb.com/docs/structure/../frontmatter/">YAML 头信息</a>中根据不同文章进行选择。
           这将在下一个部分进行介绍。标签
           <code>{% raw %}{{ content }}{% endraw %}</code>
           可以将content插入页面中。
@@ -107,7 +106,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
 
           这里放的就是你的文章了。文件格式很重要，必须要符合:
           <code>YEAR-MONTH-DAY-title.MARKUP</code>。
-          <a href="../permalinks/">永久链接</a> 可以在文章中自己定制，但是数据和标记语言都是根据文件名来确定的。
+          <a href="https://jekyllrb.com/docs/structure/../permalinks/">永久链接</a> 可以在文章中自己定制，但是数据和标记语言都是根据文件名来确定的。
 
         </p>
       </td>
@@ -155,7 +154,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
       <td>
         <p>
 
-          如果这些文件中包含 <a href="../frontmatter/">YAML 头信息</a> 部分，Jekyll 就会自动将它们进行转换。当然，其他的如 <code>.html</code>, <code>.markdown</code>, <code>.md</code>, 或者 <code>.textile</code> 等在你的站点根目录下或者不是以上提到的目录中的文件也会被转换。
+          如果这些文件中包含 <a href="https://jekyllrb.com/docs/structure/../frontmatter/">YAML 头信息</a> 部分，Jekyll 就会自动将它们进行转换。当然，其他的如 <code>.html</code>, <code>.markdown</code>, <code>.md</code>, 或者 <code>.textile</code> 等在你的站点根目录下或者不是以上提到的目录中的文件也会被转换。
 
         </p>
       </td>
@@ -169,7 +168,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
 
           其他一些未被提及的目录和文件如
           <code>css</code> 还有 <code>images</code> 文件夹，
-          <code>favicon.ico</code> 等文件都将被完全拷贝到生成的 site 中。这里有一些<a href="../sites/">使用 Jekyll 的站点</a>，如果你感兴趣就来看看吧。
+          <code>favicon.ico</code> 等文件都将被完全拷贝到生成的 site 中。这里有一些<a href="https://jekyllrb.com/docs/structure/../sites/">使用 Jekyll 的站点</a>，如果你感兴趣就来看看吧。
 
         </p>
       </td>
