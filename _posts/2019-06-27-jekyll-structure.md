@@ -8,7 +8,7 @@ author: wving5
 describe: 
 ---
 
-> 官方关于目录结构的描述文档，摘自官方 GitHub repo
+> 官方关于目录结构的描述文档，copy自官方 [GitHub repo](https://github.com/jekyll/jekyll/blob/master/docs/_docs/structure.md)
 
 Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：你用你最喜欢的标记语言来写文章，可以是 Markdown, 也可以是 Textile, 或者就是简单的 HTML, 然后 Jekyll 就会帮你套入一个或一系列的布局中。在整个过程中你可以设置 URL 路径，你的文本在布局中的显示样式等等。这些都可以通过纯文本编辑来实现，最终生成的静态页面就是你的成品了。
 
@@ -176,3 +176,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是：�
   </tbody>
 </table>
 </div>
+
+### Reference
+
+<https://github.com/jekyll/jekyll/blob/master/docs/_docs/structure.md>
