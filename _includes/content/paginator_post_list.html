@@ -41,6 +41,15 @@
   text-decoration: none;
   color: white;
 }
+
+.mdui-card-header-tag {
+  padding: 0px 5px 0px 5px;
+  color: #c7254e;
+  background-color: #e7e7e9;
+  font-family: Consolas,Courier,'Courier New',monospace;
+  font-size: 12px;
+  text-align: left;
+}
 </style>
     {% for post in paginator.posts %}
     <div class="animated flipInX mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
@@ -69,8 +78,13 @@
       <div class="mdui-divider"></div>
       <div class="mdui-card-header">
         <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
-        <div class="mdui-card-header-title">{{site.author}}</div>
-        <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <div class="mdui-card-header-title" style="display: inline-flex; margin-left: 10px">{{site.author}}</div>
+        <div style="display: flex;">
+          <div class="mdui-card-header-subtitle" style="margin-left: 10px">{{ post.date | date: "%b %-d, %Y" }}</div>
+          {% for t in post.tags %}
+          <div class="mdui-card-header-subtitle mdui-card-header-tag" style="margin-left: 10px">#{{t}}</div>
+          {% endfor %}
+        </div>
       </div>
     </div>
     {% endfor %}
