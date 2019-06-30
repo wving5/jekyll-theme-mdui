@@ -67,7 +67,7 @@ function highlightTag(obj) {
   {% for i in (1..index) %}
   {% capture color %}{{ color | minus :15}}{% endcapture %}
   {% endfor %}
-      <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})" onclick="highlightTag(this)">{{ tag }}</a>
+      <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})" onclick="highlightTag(this)"># {{ tag }}</a>
 {% endfor %}
 </div>
 <div class="mdui-row">

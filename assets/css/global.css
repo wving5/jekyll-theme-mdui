@@ -82,6 +82,11 @@ background: radial-gradient(circle, rgba(215,208,232,1) 0%, rgba(43,124,213,1) 1
     background-color: unset !important;
 }
 
+.mdui-card-header-subtitle {
+    opacity: 1 !important;
+    color: #767676;
+    font-weight: 300;
+}
 body,header{
     background-color:{{site.data.site.background.purecolor}};
 }
