@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll 目录结构"
 date:   2019-06-27 00:21:03 +0800
-tags: trivial
+tags: trivial doc
 img: https://i.loli.net/2019/06/27/5d13b0cac119227606.png
 author: wving5
 describe: 

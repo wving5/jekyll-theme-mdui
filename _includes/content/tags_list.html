@@ -7,7 +7,7 @@
 {% assign sortedtags = tags | split:' ' | sort %}
 
 <style>
-    .k-tagcloud{
+.k-tagcloud{
     padding: 1px 9px;
     margin: 9px 1px;
     line-height: 40px;
@@ -22,7 +22,28 @@
     opacity: 1;
     background: #fafafa;
 }
+.k-tagcloud-active{
+    transition: .6s;
+    opacity: 1;
+    background: #fafafa;
+}
+.mdui-hoverable-active {
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
 </style>
+<script type="text/javascript">
+function highlightTag(obj) {
+  var menus = document.getElementsByClassName("k-tagcloud");
+  for (var i = menus.length - 1; i >= 0; i--)
+  {
+    var elem = document.getElementById(menus[i].id);
+    elem.className = "k-tagcloud mdui-ripple mdui-hoverable";
+  }
+  obj.className = "k-tagcloud k-tagcloud-active mdui-ripple mdui-hoverable mdui-hoverable-active";    
+}
+</script>
 <div class="k-posts-list"></div>
 {% if site.data.site.uiux.meng == true %}
   {% if site.data.meng.background.switch == true %}
@@ -46,7 +67,7 @@
   {% for i in (1..index) %}
   {% capture color %}{{ color | minus :15}}{% endcapture %}
   {% endfor %}
-      <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})">{{ tag }}</a>
+      <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})" onclick="highlightTag(this)">{{ tag }}</a>
 {% endfor %}
 </div>
 <div class="mdui-row">
@@ -58,6 +79,7 @@
 
 <script>
 $(function(){
+
 function getUrlParam(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
