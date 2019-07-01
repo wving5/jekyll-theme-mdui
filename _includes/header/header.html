@@ -65,11 +65,47 @@
     width: 100%;
     text-align: left;
 }
+
+.live_ico_item {
+    user-select: none;
+    width: 15px;
+    height: 20px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #fff, #ec3984);
+    display: inline;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
 </style>
 <header mdui-headroom class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed">
     <div class="mdui-toolbar">
         <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-drawer="{target: '#k-menu'}"><i class="mdui-icon material-icons">&#xe5d2;</i></a>
         <a href="{{ "/" | prepend: site.baseurl}}" class="mdui-typo-title">{{site.title |upcase }}</a>
+
+<div style="margin: 0px 0px 10px -16px;">
+<div class="live_ico_item " id="youduButton" data-type="">（ΦωΦ）</div>
+<input id="duType" value="douqilai,l2d_caihong" type="hidden">
+</div>
+<script type="text/javascript">
+    /* from https://www.wikimoe.com */
+            $('#youduButton').on('click',function(){
+            if($('#youduButton').hasClass('doudong')){
+                var typeIs = $('#youduButton').attr('data-type');
+                $('#youduButton').removeClass('doudong');
+                $('body').removeClass(typeIs);
+                $('#youduButton').attr('data-type','');
+            }else{
+                var duType = $('#duType').val();
+                var duArr = duType.split(",");
+                var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+                $('#youduButton').addClass('doudong');
+                $('#youduButton').attr('data-type',dataType);
+                $('body').addClass(dataType);
+            }
+        });
+</script>
+
         <div class="mdui-toolbar-spacer"></div>
         <div class="mdui-hidden-xs-down">
             <div class="k-header-menus" id="k-menus">

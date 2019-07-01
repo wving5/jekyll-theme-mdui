@@ -15,6 +15,10 @@ layout: null
     {% endif %}
     {% endif %}
 
+html {
+    background-color: #fff;
+}
+
 h1.mdui-card-primary-title{
     margin: 0;
     font-weight: 400;

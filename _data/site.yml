@@ -69,6 +69,6 @@ lang: "zh-CN"  # lang
 
 deploy: "" # if you used coding pages
 
-custom_css: "" # Use the assets/css/customCss.css
+custom_css: "customCss.css" # Use the assets/css/customCss.css
 
 custom_js: "" # Use the assets/js/customJS.js
