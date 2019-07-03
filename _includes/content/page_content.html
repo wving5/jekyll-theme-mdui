@@ -15,18 +15,37 @@
 .k-noimg{
   padding-left: 16px;
 }
-.k-noimg h1::before{
+
+.kh1 {
+    display: block;
+    margin: .67em 0;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.kh1-noimg {
+    margin: 0;
+    font-weight: 400;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.k-noimg .kh1::before{
     content: "“";
 }
-.k-noimg h1::after{
+.k-noimg .kh1::after{
     content: "”";
 }
-.k-noimg h1:before,.k-noimg h1:after{
+.k-noimg .kh1:before,.k-noimg .kh1:after{
     display: block;
     font-size: 80px;
     margin-top: 40px;
 }
-.k-noimg a,.k-noimg h1{
+.k-noimg a,.k-noimg .kh1{
   text-decoration: none;
   color: white;
 }
@@ -39,13 +58,13 @@
             <div class="mdui-card k-postcontent">
                 {% if page.img == "" or page.img == null %}
                 <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
-                    <h1><a>{{page.title}}</a></h1>
+                    <div class="kh1"><a>{{page.title}}</a></div>
                 </div>
                 {% else %}
                 <div class="mdui-card-media k-post-media" style="background-image: url({{page.img}});">
                     <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
                         <div class="mdui-card-primary">
-                            <h1 class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{page.title}}</a></h1>
+                            <div class="mdui-card-primary-title kh1-noimg"><a class="mdui-text-color-white-text">{{page.title}}</a></div>
                             {% if page.describe != null %}
                             <div class="mdui-card-primary-subtitle">
                                 {{page.describe}}

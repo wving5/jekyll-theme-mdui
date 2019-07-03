@@ -76,6 +76,12 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+.live_ico_item:hover .normal{
+   display: none; }
+
+.live_ico_item:hover .onhover:before{
+   content:"（￣▽￣）"; }
 </style>
 <header mdui-headroom class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed">
     <div class="mdui-toolbar">
@@ -83,7 +89,7 @@
         <a href="{{ "/" | prepend: site.baseurl}}" class="mdui-typo-title">{{site.title |upcase }}</a>
 
 <div style="margin: 0px 0px 10px -16px;">
-<div class="live_ico_item " id="youduButton" data-type="">（ΦωΦ）</div>
+<div class="live_ico_item " id="youduButton" data-type=""><span class="normal">（ΦωΦ）</span><span class="onhover"></span></div>
 <input id="duType" value="douqilai,l2d_caihong" type="hidden">
 </div>
 <script type="text/javascript">

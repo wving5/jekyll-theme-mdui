@@ -3,7 +3,7 @@ layout: post
 title:  "Learn Weblog Stuff"
 date:   2019-07-01 00:00:00 +0800
 tags: doc
-img: https://i.loli.net/2019/06/27/5d13b0cac119227606.png
+img: 
 author: wving5
 describe: 
 ---
@@ -29,6 +29,7 @@ describe:
 * <https://css-tricks.com/almanac/properties/f/filter/>
 * <https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function>
 * <https://css-tricks.com/snippets/css/gradient-text/>
+* <https://blog.walterlv.com/post/add-light-dark-theme-support-for-blogs.html>
 
 ##CDN
 * <https://cdnjs.com/libraries/prettify>
