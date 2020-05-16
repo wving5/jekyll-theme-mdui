@@ -15,9 +15,37 @@ layout: null
     {% endif %}
     {% endif %}
 
+
+@font-face{
+    font-family: "Source Han Serif CN Regular";
+    src: url("https://media.zine.la/subfonts/Source Han Serif CN Regular/9193/7137/11691/d6597ca49481f2fefaec978273b6e5c456f5dbcb.otf");
+}
+@font-face{
+    font-family: "PT_Serif-Web-Regular";
+    src: url("https://static.zine.la/font/PT_Serif-Web-Regular.min.ttf");
+}
+@font-face{
+    font-family: "Mukta-Light";
+    src: url("https://static.zine.la/font/Mukta-Light.min.ttf");
+}
+@font-face{
+    font-family: "Oswald-Regular";
+    src: url("https://static.zine.la/font/Oswald-Regular.min.ttf");
+}
+
+
 html {
     background-color: #fff;
 }
+
+
+/** Test **/
+@media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min-resolution:2dppx) {
+    html {
+        font-family:Mukta,PingFangSC-Regular,Microsoft YaHei,Heiti SC,SimHei,Arial!important
+    }
+}
+
 
 h1.mdui-card-primary-title{
     margin: 0;
@@ -103,13 +131,26 @@ body,header{
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(0,0,255,0.4);
 }
-  body {
+  
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
 
-  .container {
+    /** Zine **/
+    font-family: Source Han Sans CN Regular, SourceHanSerifSC-Regular, PingFangSC-Light, Microsoft YaHei, Songti SC, PT-Serif-Web, Arial;;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    color: #202020;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.container {
     flex: 1 0 auto;
   }
      
