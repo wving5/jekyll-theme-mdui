@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 # source 'https://gems.ruby-china.com'
 
-gem 'jekyll-paginate'
-gem 'jekyll-sitemap'
-gem 'jekyll-feed'
+group :jekyll_plugins do
+	gem 'jekyll-paginate'
+	gem 'jekyll-sitemap'
+	gem 'jekyll-feed'
+end
+
 gemspec
