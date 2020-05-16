@@ -2,9 +2,9 @@
 .bundle
 .sass-cache
 _site
-Gemfile.lock
 node_modules
 .jekyll-metadata
 # allow: assets/live2d
 package-lock.json
 .vscode
+.jekyll-cache
