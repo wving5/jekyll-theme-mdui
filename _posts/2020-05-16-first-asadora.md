@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "晨间剧首体验"
+title:  "Asadora 1st exp"
 date:   2020-05-16 11:12:48 +0800
 tags: trivial
 img: 
