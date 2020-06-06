@@ -12,11 +12,11 @@ describe:
 
 ### #需求
 
-wx 内 H5 直跳 native。 问题丢过来的时候，Leader 已经给了方向，universal link （下简称 u9 link），舒肤佳
+wx 内 H5 直跳 native。 问题丢过来的时候，Leader 已经给了方向 `universal link`，体验舒肤佳
 
 ### #围观下前人踩过的坑
-几个 18/19 年的帖子说 wx 开始着手封了 u9 link，将信将疑。
-SO 上有12.2 u9 link 失效的提问
+几个 18/19 年的帖子说 wx 开始着手封了 universal link，将信将疑。
+SO 上有12.2 universal link 失效的提问
 反正先搞起来再说...
 
 
@@ -27,7 +27,7 @@ SO 上有12.2 u9 link 失效的提问
 2. iOS 9+ (含)
 
 ### #操作流程
-1. Capabilities 里修改 entitlements, App 关联上域名。支持通配符`*`，即1对多
+1. Capabilities 里修改 entitlements, App 关联上域名。支持通配符`*`，~~即1对多~~ 匹配当前域名的所有子域名
 2. 构造一个 manifest 名为 apple-app-site-association (json)，作用就好比是当前域名跳转 App 的路由表。具体格式见官网。 
 	* 注意键值有两套: 有一套新的; 旧的兼容 iOS12 及以下。按需使用旧的，支持APL定义的通配符 `NOT ? *`
 	* 每个关联 App 的域名(子域名)都要配置一次。 APL注: ````If your site uses different subdomains (such as example.com, www.example.com, and support.example.com) each requires its own entry in the Associated Domains Entitlement, and each must serve its own apple-app-site-association file.````
@@ -40,7 +40,7 @@ SO 上有12.2 u9 link 失效的提问
 对应 AppDelegate 中处理路由。雷同 URL scheme
 
 ### #自己踩的坑
-1. 更改 manifest 需要删除 App 再装才生效 (文档有写,实操时忘了)。APL 注: 
+1. 更改 manifest 需要删除 App 再装才能立即生效 (文档有写,实操时忘了)。APL 注: 
 `After an app successfully associates with a domain, it remains associated until the app is **deleted** from the device. During development, delete your app from your testing device each time you update the association file to immediately see your changes.`
 
 2. 到底什么时候才能"跳转"
@@ -63,4 +63,23 @@ SO 上有12.2 u9 link 失效的提问
 
 *（ 没错，好像通篇也没 wx 什么事儿*。我大胆~~(瞎JB)~~猜测 WKWebview 首先是独立进程，openURL 又比 web 容器的 navigation 优先级高，理论上APL不给你拦截的机会你就拦截不到啦，臭流氓哈哈哈(立了个旗)。
 
+<br/>
 
+----
+
+### 2020-06-06 补充:
+
+* Web容器里的“跨域”可以是跨**子域名**（实测至少二级域名没问题
+
+* wx 1.8.6+ sdk 强行要求提供 universal link 了 （这旗子倒的有点快。。如有所忌惮，可以给它独立提供一个 domain。针对白名单当然是痴人妄想。
+
+* 覆盖安装时，查看设备 log 可能会出现以下进程 MobileSMS,SpringBoard,mediaserverd,appstored,duetexpertd 打印相关的 request 
+````
+默认	17:07:47.916811+0800	SpringBoard	Requested application <private> has policy 0, associated category:DH1009 associated sites:(null) equivalent bundle identifiers:com.demo.testUniversalLink
+````
+* 上面 log 所谓的这个 `request`，在一定时间内会直接命中设备上的缓存。超出一定时间，安装 App 的行为会触发设备上所有 associated domain 缓存的刷新。(抓包会看到大量请求)
+	* 如果覆盖安装时，Associated Domains 有修改过，则会重新去**修改后的域名**查询一次。即没修改的域名，不会再次去查询。
+	* 如果覆盖安装时，Associated Domains 没有改变，则会看缓存是否失效，再去查询。( 具体缓存失效时间未知，貌似24小时也行，12小时也行，你猜...
+	* 至于从 AppStore 安装更新，其行为就不得而知了。也许同 testflight? 懒得去试了。 ( 有知道的同学可以给本人提 issue 更正
+
+综上所述，除非你预先**一次性关联了多个域名**。否则还是不太容易去控制 Associated Domains 的切换，因为刷新的时机/条件，都不是可以随意掌控的。强行要求用户删除重装 App / 或者明天再打开试试，有点太过硬核了。
