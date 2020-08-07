@@ -18,3 +18,4 @@ describe:
 * iOS 多点触摸  -> 通知栏布局会错乱
 * Typora 闪退  -> 未保存文档丢失 （目前为止最大的一次损失）
 * Omni Disk Sweeper 闪退  -> ...
+* TouchBar 消失 -> sudo pkill "TouchBarServer"

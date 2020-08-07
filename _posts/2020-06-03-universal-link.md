@@ -91,3 +91,5 @@ func application(_ application: NSApplication,
 	* 至于从 AppStore 安装更新，其行为就不得而知了。也许同 TestFlight ? 懒得去试了。 ( 知情的同学可以给本人提 issue 更正
 
 综上所述，除非你预先**一次性关联了多个域名**。否则还是不太容易去控制 Associated Domains 的更新，因为刷新的时机/条件，都不是可以随意掌控的。强行要求用户删除重装 App / 或者明天再打开试试，有点太过硬核了。
+
+[Test Universal link](https://zine.la/app/open)
